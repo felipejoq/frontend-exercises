@@ -34,9 +34,10 @@ export const useChronometer = () => {
     }
 
     const handleSave = () => {
-        if(time > 0) {
-            setSavedTimes(prevSavedTimes => [...prevSavedTimes, time]);
-            localStorage.setItem('savedTimes', JSON.stringify([...savedTimes, time]));
+        if(time > 0 && !savedTimes.includes(time)) {
+            const newSavedTimes = [...savedTimes, time];
+            setSavedTimes(newSavedTimes);
+            localStorage.setItem('savedTimes', JSON.stringify(newSavedTimes));
         }
     }
 
