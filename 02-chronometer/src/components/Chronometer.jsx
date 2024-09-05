@@ -15,11 +15,13 @@ export const Chronometer = () => {
     return (
         <>
             <h1>Chronometer</h1>
-            <p>{formatTime(time)}</p>
-            <button onClick={handleStart}>Start</button>
-            <button onClick={handleStop}>Stop</button>
-            <button onClick={handleReset}>Reset</button>
-            <button disabled={time <= 0} onClick={handleSave}>Save</button>
+            <p className="format-time">{formatTime(time)}</p>
+            <div className="controls-container">
+                <button onClick={handleStart}>Start</button>
+                <button onClick={handleStop}>Stop</button>
+                <button onClick={handleReset}>Reset</button>
+                <button disabled={time <= 0} onClick={handleSave}>Save</button>
+            </div>
             <ul>
                 {
                     savedTimes.map((savedTime, index) => {

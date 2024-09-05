@@ -35,6 +35,16 @@ button:disabled {
     gap: 10px;
 }
 
+.format-time {
+    font-size: 4rem;
+    letter-spacing: 2px;
+}
+
+.controls-container {
+    display: flex;
+    gap: 10px;
+}
+
 .diff {
     color: forestgreen;
 }
