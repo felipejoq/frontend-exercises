@@ -4,7 +4,9 @@ import {Chronometer} from "./components/Chronometer.jsx";
 function App() {
 
   return (
-      <Chronometer />
+      <div className='container'>
+        <Chronometer />
+      </div>
   )
 }
 
