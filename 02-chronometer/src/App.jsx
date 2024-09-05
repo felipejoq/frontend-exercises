@@ -5,7 +5,9 @@ function App() {
 
   return (
       <div className='container'>
-        <Chronometer />
+        <Chronometer
+            title='Mini Chronometer'
+        />
       </div>
   )
 }

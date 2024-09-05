@@ -1,7 +1,8 @@
 import {useChronometer} from "../hooks/useChronometer.js";
 import {formatTime} from "../utils/formatters.js";
+import PropTypes from "prop-types";
 
-export const Chronometer = () => {
+export const Chronometer = ({title = "Chronometer"}) => {
 
     const {
         time,
@@ -14,7 +15,7 @@ export const Chronometer = () => {
 
     return (
         <>
-            <h1>Chronometer</h1>
+            <h1 className="title">{title}</h1>
             <p className="format-time">{formatTime(time)}</p>
             <div className="controls-container">
                 <button onClick={handleStart}>Start</button>
@@ -36,4 +37,8 @@ export const Chronometer = () => {
             </ul>
         </>
     )
+}
+
+Chronometer.propTypes = {
+    title: PropTypes.string,
 }
