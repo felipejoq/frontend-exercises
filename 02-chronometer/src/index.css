@@ -3,3 +3,38 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+button {
+    padding: 10px 20px;
+    background-color: #f1356d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f1356d;
+}
+
+button:active {
+    background-color: #f1356d;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 10px;
+}
+
+.diff {
+    color: forestgreen;
+}
