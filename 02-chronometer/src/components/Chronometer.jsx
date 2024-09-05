@@ -23,7 +23,7 @@ export const Chronometer = ({title = "Chronometer"}) => {
                 <button onClick={handleReset}>Reset</button>
                 <button disabled={time <= 0} onClick={handleSave}>Save</button>
             </div>
-            <ul>
+            <ul className="saved-times">
                 {
                     savedTimes.map((savedTime, index) => {
                         const timeDifference = savedTime - (savedTimes[index - 1] || 0);

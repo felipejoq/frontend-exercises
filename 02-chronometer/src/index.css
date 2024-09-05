@@ -37,17 +37,25 @@ button:disabled {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     gap: 10px;
 }
 
 .format-time {
     font-size: 4rem;
-    letter-spacing: 2px;
+    letter-spacing: 5px;
+    width: 20ch;
+    text-align: center;
+    font-family: monospace;
 }
 
 .controls-container {
     display: flex;
+    gap: 10px;
+}
+
+.saved-times {
+    display: flex;
+    flex-direction: column;
     gap: 10px;
 }
 
