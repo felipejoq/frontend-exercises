@@ -1,6 +1,7 @@
 import {useChronometer} from "../hooks/useChronometer.js";
 import {formatTime} from "../utils/formatters.js";
 import PropTypes from "prop-types";
+import {ButtonAction} from "./ButtonAction.jsx";
 
 export const Chronometer = ({title = "Chronometer"}) => {
 
@@ -18,10 +19,18 @@ export const Chronometer = ({title = "Chronometer"}) => {
             <h1 className="title">{title}</h1>
             <p className="format-time">{formatTime(time)}</p>
             <div className="controls-container">
-                <button onClick={handleStart}>Start</button>
-                <button onClick={handleStop}>Stop</button>
-                <button onClick={handleReset}>Reset</button>
-                <button disabled={time <= 0} onClick={handleSave}>Save</button>
+                <ButtonAction actionClick={handleStart}>
+                    Start
+                </ButtonAction>
+                <ButtonAction actionClick={handleStop}>
+                    Stop
+                </ButtonAction>
+                <ButtonAction actionClick={handleReset}>
+                    Reset
+                </ButtonAction>
+                <ButtonAction disableCondition={time <= 0} actionClick={handleSave}>
+                    Save
+                </ButtonAction>
             </div>
             <ul className="saved-times">
                 {
