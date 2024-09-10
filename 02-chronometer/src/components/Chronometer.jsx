@@ -16,8 +16,12 @@ export const Chronometer = ({title = "Chronometer"}) => {
 
     return (
         <>
-            <h1 className="title">{title}</h1>
-            <p className="format-time">{formatTime(time)}</p>
+            <h1 className="title">
+                {title}
+            </h1>
+            <p className="format-time">
+                {formatTime(time)}
+            </p>
             <div className="controls-container">
                 <ButtonAction actionClick={handleStart}>
                     Start
@@ -38,7 +42,8 @@ export const Chronometer = ({title = "Chronometer"}) => {
                         const timeDifference = savedTime - (savedTimes[index - 1] || 0);
                         return (
                             <li key={index}>
-                                {formatTime(savedTime)} <span className='diff'>(+{formatTime(timeDifference)})</span>
+                                {formatTime(savedTime)}
+                                <span className='diff'>(+{formatTime(timeDifference)})</span>
                             </li>
                         )
                     })
